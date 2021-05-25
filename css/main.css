@@ -642,7 +642,7 @@ blockquote {
 }
 
 .section-inner.start-page-full-width .hp-text-block {
-    padding: 70px 15%;
+    padding: 30px 15%;
     background-color: #fcfcfc;
     height: 100%;
     min-height: 100px
@@ -655,7 +655,7 @@ blockquote {
 }
 
 .hp-buttons {
-    margin-top: 30px
+    margin-top: -20px
 }
 
 .no-js .pt-page {
@@ -3392,4 +3392,20 @@ blockquote p {
     font-size: 12px;
     text-align: center;
     color: #aeaeae
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.profile-user-img {
+    border: 3px solid #ffffff;
+    margin: 0 auto;
+    padding: 3px;
+    width: 100px;
+}
+
+.img-fluid {
+    height: 90px;
+    /* max-height: 82px; */
 }
