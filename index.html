@@ -331,7 +331,8 @@
 						
 						<div class="row">
 							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-								<div class="map" id="map"></div>
+								<div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Go digitalin aja&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://sprunkin.com">Sprunki Mods</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
+								<br>
 								<div class="align-center" style="font-size: x-large;">
 									<a style="margin-right: 10px;" target="_blank" href="https://github.com/agungmartono"><span class="fa fa-github"></span></a>
 									<a style="margin-right: 10px;" target="_blank" href="https://www.linkedin.com/in/agungmartonosyn"><span class="fa fa-linkedin"></span></a>
@@ -362,48 +363,6 @@
 	
 	<!-- Main Scripts -->
 	<script src="js/scripts.js"></script>
-
-	<!-- Google map api -->
-	<script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap"
-      defer
-    ></script>
-	
-	<script>
-		let map;
-
-		function initMap() {
-		const mapOptions = {
-			zoom: 10,
-			// center: { lat: -6.220561, lng: 106.041053 },
-			center: { lat: -6.2206282, lng: 106.0410425 },
-		};
-		map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-		const marker = new google.maps.Marker({
-			// The below line is equivalent to writing:
-			// position: new google.maps.LatLng(-34.397, 150.644)
-			// position: { lat: -6.220561, lng: 106.041053 },
-			position: { lat: -6.2206282, lng: 106.0410425 },
-			map: map,
-		});
-		// You can use a LatLng literal in place of a google.maps.LatLng object when
-		// creating the Marker object. Once the Marker object is instantiated, its
-		// position will be available as a google.maps.LatLng object. In this case,
-		// we retrieve the marker's position using the
-		// google.maps.LatLng.getPosition() method.
-		const infowindow = new google.maps.InfoWindow({
-			content: "<p>Marker Location:" + marker.getPosition() + "</p>",
-		});
-
-		google.maps.event.addListener(marker, "click", () => {
-			infowindow.open(map, marker);
-		});
-		}
-
-		window.initMap = initMap;
-	</script>
-
 </body>
 
 </html>
